@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/grid/Desktop/Nowait/app/libs/libDaumMapAndroid.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="91c9de067eff6b3e026d21934e91ec45db8cd277">
+        <dex dex="/Users/grid/Desktop/Nowait/app/build/intermediates/pre-dexed/debug/libDaumMapAndroid-c52572136c6577667ac61e30a332d42dc8b362e7.jar" />
+    </item>
+
+</items>

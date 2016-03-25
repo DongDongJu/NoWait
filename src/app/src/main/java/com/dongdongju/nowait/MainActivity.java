@@ -1,9 +1,13 @@
 package com.dongdongju.nowait;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import net.daum.android.map.MapView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,13 +24,17 @@ public class MainActivity extends AppCompatActivity {
     Button.OnClickListener button0Listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+                startActivity(new Intent(MainActivity.this,ViewMapActivity.class));
         }
     };
     Button.OnClickListener button2Listener = new View.OnClickListener() {
         @Override
-        public void onClick(View v) {
-
+        public void onClick(View v){
+                Intent routeSearch = new Intent(Intent.ACTION_VIEW);
+                routeSearch.addCategory(Intent.CATEGORY_BROWSABLE);
+                routeSearch.addCategory(Intent.CATEGORY_DEFAULT);
+                routeSearch.setData(Uri.parse("daummaps://route?sp=37.537229,127.005515&ep=37.4979502,127.0276368&by=PUBLICTRANSIT"));
+                startActivity(routeSearch);
         }
     };
     Button.OnClickListener button3Listener = new View.OnClickListener() {
